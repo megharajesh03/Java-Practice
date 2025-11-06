@@ -1,0 +1,438 @@
+ 
+
+1.   Task Description:
+
+Create a simple program that models animals in a zoo.
+
+Use both an interface and an abstract class.
+
+Requirements:
+
+    Create an interface named Animal with the following methods:
+
+    void eat();
+    void sleep();
+
+    Create an abstract class named Mammal that:
+
+    Implements the Animal interface.
+    Has an instance variable String name;
+    Includes a constructor that takes a name.
+    Implements the sleep() method (e.g., prints "name is sleeping...").
+    Declares an abstract method void makeSound();
+
+    Create two subclasses of Mammal:
+
+    Dog
+    Cat
+    Each should implement the eat() and makeSound() methods differently.
+
+    In a Main class, create objects of Dog and Cat and call all their methods.
+
+
+Example Output:
+
+Rex is eating bones.
+
+Rex says: Woof!
+
+Rex is sleeping...
+
+ 
+
+Misty is eating fish.
+
+Misty says: Meow!
+
+Misty is sleeping...
+
+
+
+2. Basic Task – Shape Interface
+
+Goal: Understand how interfaces define behavior.
+
+Description:
+
+1.    Create an interface Shape with methods:
+
+o  double area();
+
+o  double perimeter();
+
+2.    Implement two classes: Circle and Rectangle.
+
+3.    Use constructors to set dimensions.
+
+4.    In the main program, create objects of both and print their area and perimeter.
+
+Example Output:
+
+Circle area: 78.5
+
+Circle perimeter: 31.4
+
+Rectangle area: 20.0
+
+Rectangle perimeter: 18.0
+
+
+3. Interface + Abstract Class Combination
+
+Goal: Use both together to build layered design.
+
+Description:
+
+1.    Create an interface Payment with:
+
+o  void pay(double amount);
+
+2.    Create an abstract class OnlinePayment that implements Payment:
+
+o  Has field String accountId;
+
+o  Concrete method void connect() → prints connection message.
+
+o  Abstract method void authenticate();
+
+3.    Create subclasses:
+
+o  CreditCardPayment
+
+o  UPIPayment
+
+Each implements authenticate() and pay() differently.
+
+4.    In main(), demonstrate different payments.
+4.Challenge Task – Smart Home System
+
+Goal: Design a multi-layered, interface-driven system.
+
+Description:
+
+1.    Create interface SmartDevice:
+
+o  void turnOn();
+
+o  void turnOff();
+
+o  String getStatus();
+
+2.    Create abstract class Appliance implementing SmartDevice:
+
+o  Field: String brand
+
+o  Concrete getStatus() method → returns status string.
+
+o  Abstract methods: void adjustSetting(int level);
+
+3.    Subclasses:
+
+o  SmartLight
+
+o  SmartThermostat
+
+4.    Each implements behavior differently.
+
+5.    In main(), simulate turning on devices and adjusting setting
+5. Basic Inheritance – Person & Student
+
+Goal: Understand simple inheritance (using extends).
+
+Description:
+
+1.    Create a base class Person with:
+
+o  Fields: name, age
+
+o  Method: void displayInfo() → prints name and age.
+
+2.    Create subclass Student that:
+
+o  Adds field: String course
+
+o  Adds method: void study() → prints that the student is studying.
+
+3.    In main(), create a Student object and call both displayInfo() and study().
+
+Example Output:
+
+Name: Alice
+
+Age: 20
+
+Alice is studying Computer Science.
+6, Using super and Constructor Inheritance – Employee System
+
+Goal: Learn constructor chaining and super().
+
+Description:
+
+1.    Base class Employee:
+
+o  Fields: name, salary
+
+o  Constructor to initialize both.
+
+o  Method displayInfo()
+
+2.    Subclass Manager:
+
+o  Additional field: department
+
+o  Constructor calls super(name, salary)
+
+o  Override displayInfo() to include department.
+
+3.    In main(), create both Employee and Manager objects.
+
+Example Output:
+
+Name: John, Salary: 50000.0
+
+Name: Sarah, Salary: 80000.0, Department: IT
+
+
+7. Inheritance + Overriding + super Keyword
+
+Scenario:
+
+Create a small hierarchy for a Library System.
+
+Description:
+
+1.    Base class LibraryItem:
+
+o  Fields: title, author
+
+o  Method: void displayInfo()
+
+2.    Subclass Book:
+
+o  Adds int pages
+
+o  Overrides displayInfo() but also calls super.displayInfo()
+
+3.    Subclass Magazine:
+
+o  Adds String issueMonth
+
+4.    In main(), create a few objects and display info.
+
+Example Output:
+
+Title: The Hobbit, Author: Tolkien, Pages: 310
+
+Title: National Geographic, Author: Various, Issue: October
+
+
+8. HashSet – Removing Duplicates
+
+Goal: Learn about uniqueness in Sets.
+
+Description:
+
+1.    Create a List<Integer> with duplicates: [10, 20, 30, 20, 10, 40].
+
+2.    Convert it into a HashSet to remove duplicates.
+
+3.    Print both the list and the set.
+
+4.    Observe that the HashSet has no duplicates and may not preserve order.
+
+Example Output:
+
+Original List: [10, 20, 30, 20, 10, 40]
+
+Unique Values (Set): [40, 10, 20, 30]
+
+
+9. Queue – Task Management System
+
+Goal: Learn FIFO behavior using a LinkedList as a Queue.
+
+Description:
+
+1.    Create a Queue<String> of tasks.
+
+2.    Add tasks: "Check Emails", "Attend Meeting", "Write Report".
+
+3.    Use peek() to see the next task.
+
+4.    Use poll() to process (remove) each task until empty.
+
+Example Output:
+
+Next Task: Check Emails
+
+Processing: Check Emails
+
+Processing: Attend Meeting
+
+Processing: Write Report
+
+All tasks completed.
+
+
+10. Advanced Challenge – Word Frequency Counter
+
+Goal: Combine loops and HashMap to count words.
+
+Description:
+
+1.    Take a sample sentence:
+
+"Java is fun and Java is powerful"
+
+2.    Split it into words.
+
+3.    Use a HashMap<String, Integer> to count each word’s frequency.
+
+4.    Print word frequencies.
+
+Example Output:
+
+Java → 2
+
+is → 2
+
+fun → 1
+
+and → 1
+
+powerful → 1
+
+
+11. Advanced Challenge – Word Frequency Counter
+
+Goal: Combine loops and HashMap to count words.
+
+Description:
+
+1.    Take a sample sentence:
+
+"Java is fun and Java is powerful"
+
+2.    Split it into words.
+
+3.    Use a HashMap<String, Integer> to count each word’s frequency.
+
+4.    Print word frequencies.
+
+Example Output:
+
+Java → 2
+
+is → 2
+
+fun → 1
+
+and → 1
+
+powerful → 1
+
+
+12. Bonus Challenge – Student Ranking with TreeMap
+
+Goal: Use a sorted map to rank students by score.
+
+Description:
+
+1.    Create a TreeMap<Integer, String> where key = marks, value = student name.
+
+2.    Add several entries.
+
+3.    Print students in ascending order of marks.
+
+4.    Display the student with highest marks using lastEntry().
+
+Example Output:
+
+60 → John
+
+75 → Lisa
+
+85 → Arjun
+
+Topper: 85 → Arjun
+
+
+13. Problem statement:
+
+Create a Java class BankAccount that represents a simple bank account.
+
+Use encapsulation to ensure that the account details (like balance and account number) cannot be accessed or modified directly.
+
+Requirements:
+
+1.    Create a class BankAccount with the following private fields:
+
+o  accountNumber (String)
+
+o  balance (double)
+
+2.    Provide public getter and setter methods:
+
+o  Getter for accountNumber
+
+o  Getter for balance
+
+o  Setter for balance (should only allow positive values)
+
+3.    Add a constructor to initialize the account.
+
+4.    Add two public methods:
+
+o  deposit(double amount) → increases the balance
+
+o  withdraw(double amount) → decreases the balance if there’s enough money
+
+5.    In the Main class, create a BankAccount object and demonstrate:
+
+o  Depositing money
+
+o  Withdrawing money
+
+o  Displaying account details
+
+
+14. Employee Salary Management
+
+Create an Employee class with private fields:
+
+·       empId
+
+·       name
+
+·       basicSalary
+
+·       bonusPercentage
+
+Add:
+
+·       getGrossSalary() → returns basicSalary + (basicSalary * bonusPercentage / 100)
+
+·       Setters that validate inputs (e.g., no negative salary/bonus).
+
+Goal: Encapsulation with derived properties and computed data.
+
+
+15. Payment System
+
+Create a superclass Payment with method:
+
+void pay(double amount)
+
+Subclasses:
+
+·       CreditCardPayment
+
+·       PaypalPayment
+
+·       BankTransferPayment
+
+Each overrides pay() and prints a message like “Paid 100.0 via PayPal.”
+
+Goal: Understand polymorphism through common interfaces.
+
+
