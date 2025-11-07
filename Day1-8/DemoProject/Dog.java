@@ -1,0 +1,13 @@
+package com.example;
+
+public class Dog {
+static int legs=4;  
+static void eat() {
+	System.out.println("Eats bone");
+}
+
+public static void main(String[] args) {
+	Dog.eat(); 
+	System.out.println(Dog.legs);
+}
+}
