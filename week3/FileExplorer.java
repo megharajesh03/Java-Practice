@@ -1,8 +1,9 @@
+//Object Level Synchronization2
+
 package week3;
 
 import java.io.*;
 
-//Sample serializable class
 class Data implements Serializable {
 	private String message;
 	public Data(String message) {

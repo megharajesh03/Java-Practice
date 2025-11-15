@@ -1,3 +1,4 @@
+//Method level synchronisation2
 package week3;
 
 import java.io.*;
@@ -32,7 +33,7 @@ class AppendableObjectOutputStream extends ObjectOutputStream {
 	}
 }
 
-class TransactionSerializer {
+public class TransactionSerializer {
 
 	private final File file;
 

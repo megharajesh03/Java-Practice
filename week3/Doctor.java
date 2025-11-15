@@ -1,8 +1,8 @@
+//Object level synchronization1
 package week3;
 
 import java.io.*;
 
-//Doctor class must be serializable
 public class Doctor implements Serializable {
 	private String name;
 	private String specialization;

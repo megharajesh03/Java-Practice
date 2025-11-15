@@ -1,3 +1,4 @@
+//Method level synchronisation1
 package week3;
 
 import java.io.*;

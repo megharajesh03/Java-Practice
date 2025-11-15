@@ -1,8 +1,8 @@
+//Method Level Synchronization3
 package week3;
 
 import java.io.*;
 
-//Appointment class must implement Serializable
 class Appointment implements Serializable {
 	private String doctorName;
 	private String patientName;

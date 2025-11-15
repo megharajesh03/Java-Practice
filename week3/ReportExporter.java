@@ -1,8 +1,8 @@
+//Object Level Synchronization3
 package week3;
 
 import java.io.*;
 
-//PatientReport class must be serializable
 class PatientReport implements Serializable {
 	private String patientName;
 	private String diagnosis;
@@ -27,7 +27,7 @@ class PatientReport implements Serializable {
 }
 
 //Exporting PatientReport to file with synchronized block
-class ReportExporter {
+public class ReportExporter {
 
 	// Non-synchronized method with synchronized block for selective synchronization
 	public void exportReport(PatientReport report) {
