@@ -1,0 +1,45 @@
+mysql> create table Employee(id int primary key,name text,salary int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select * from Employee;
+Empty set (0.00 sec)
+
+mysql> desc Employee;
++--------+------+------+-----+---------+-------+
+| Field  | Type | Null | Key | Default | Extra |
++--------+------+------+-----+---------+-------+
+| id     | int  | NO   | PRI | NULL    |       |
+| name   | text | YES  |     | NULL    |       |
+| salary | int  | YES  |     | NULL    |       |
++--------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> Insert into Employee values(101,'Megha',33000),(102,'Liya',40000);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> create table Department(deptid int primary key,deptname text);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> Insert into Department Values(101,'IT'),(102,'HR');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select e.name as employeename,d.deptname from Employee e Join Department d on d.deptid=e.id;
++--------------+----------+
+| employeename | deptname |
++--------------+----------+
+| Megha	       | IT       |
+| Liya         | HR       |
++--------------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Employee where salary>(select Avg(salary) from Employee);
++-----+----------+--------+
+| id  | name     | salary |
++-----+----------+--------+
+| 101 | Liya	 |  40000 |
++-----+----------+--------+
+1 row in set (0.00 sec)
+
+mysql>
