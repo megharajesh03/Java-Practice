@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xmlns:p="http://www.springframework.org/schema/p"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- 	
+	<bean id="c1" class="com.example.Calc">
+		<property name="x" value="21"></property>
+		<property name="y" value="36"></property>
+	</bean>
+ -->
+
+	<bean id="con" class="com.example.Cat">
+		<constructor-arg type="int" value="4"></constructor-arg>
+	
+	</bean>
+	<bean id="con1" class="com.example.Cat">
+		<constructor-arg type="String" value="Tom"></constructor-arg>
+	
+	</bean>
+	<bean id="con2" class="com.example.Cat">
+		<constructor-arg type="int" value="4"></constructor-arg>
+		<constructor-arg type="String" value="Kitty"></constructor-arg>
+	
+	</bean>
+
+
+
+</beans>

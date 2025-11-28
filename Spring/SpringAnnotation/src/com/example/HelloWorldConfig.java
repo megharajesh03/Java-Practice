@@ -1,0 +1,12 @@
+package com.example;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+
+public class HelloWorldConfig {
+	@Bean(name = "hw")
+	@Scope(value ="prototype")	//default singleton
+	public HelloWorld meth1() {
+		return new HelloWorld();
+	}
+}
